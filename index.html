@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#071b18">
+  <title>Interview Deck — Jr. Completion / Operation Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <div class="brand-block">
+        <div class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></div>
+        <div>
+          <p class="eyebrow">INTERVIEW DECK</p>
+          <h1>Jr. Completion / Operation Engineer</h1>
+        </div>
+      </div>
+      <div class="header-actions">
+        <div class="language-switch" id="languageSwitch" aria-label="Pilih bahasa">
+          <button class="language-option active" type="button" data-language="id">IND</button>
+          <button class="language-option" type="button" data-language="en">ENG</button>
+        </div>
+        <div class="source-pill"><i></i> <span id="sourcePillText">3 Materi + Update Ayah</span></div>
+        <button class="icon-button" id="focusButton" type="button" title="Mode fokus baca" aria-label="Mode fokus baca">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3H5a2 2 0 0 0-2 2v3M16 3h3a2 2 0 0 1 2 2v3M8 21H5a2 2 0 0 1-2-2v-3M16 21h3a2 2 0 0 0 2-2v-3"/></svg>
+        </button>
+      </div>
+    </header>
+
+    <main class="workspace">
+      <aside class="library-panel">
+        <div class="search-wrap">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg>
+          <input id="searchInput" type="search" placeholder="Cari keyword atau pertanyaan..." autocomplete="off">
+          <kbd>/</kbd>
+        </div>
+
+        <div class="filter-row" id="filterRow" aria-label="Filter kategori"></div>
+        <div class="alphabet" id="alphabet" aria-label="Navigasi abjad"></div>
+
+        <div class="list-meta">
+          <span id="resultCount">0 topik</span>
+          <button id="favoritesButton" class="text-button" type="button">☆ <span id="favoritesLabel">Tersimpan</span></button>
+        </div>
+        <div class="topic-list" id="topicList"></div>
+      </aside>
+
+      <section class="answer-panel" id="answerPanel" aria-live="polite">
+        <div class="answer-toolbar">
+          <div class="crumb" id="crumb">PERSONAL</div>
+          <div class="answer-actions">
+            <label class="font-sizer" for="fontSizeSlider" title="Ubah ukuran teks jawaban">
+              <span class="font-small">A</span>
+              <input id="fontSizeSlider" type="range" min="16" max="36" step="1" value="21" aria-label="Ukuran font jawaban">
+              <span class="font-large">A</span>
+              <output id="fontSizeValue" for="fontSizeSlider">21</output>
+            </label>
+            <button class="icon-button small" id="favoriteButton" type="button" title="Simpan topik" aria-label="Simpan topik">☆</button>
+            <button class="copy-button" id="copyButton" type="button">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></svg>
+              <span id="copyButtonLabel">Salin jawaban</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="answer-content">
+          <div class="title-row">
+            <div>
+              <div class="keyword-label" id="keywordLabel">KEYWORD</div>
+              <h2 id="answerTitle"></h2>
+            </div>
+            <div class="duration" id="duration">± 60 detik</div>
+          </div>
+          <p class="question" id="question"></p>
+
+          <div class="mode-tabs" role="tablist">
+            <button class="mode-tab active" data-mode="quick" type="button">Versi siap dibaca</button>
+            <button class="mode-tab" data-mode="full" type="button">Versi lebih detail</button>
+          </div>
+
+          <article class="script-card">
+            <div class="quote-mark">“</div>
+            <p id="scriptText"></p>
+          </article>
+
+          <section class="hub-visual" id="hubVisual" hidden>
+            <div class="hub-section-heading">
+              <span id="visualMapLabel">VISUAL MAP</span>
+              <small id="visualMapHint">Alur besar section ini</small>
+            </div>
+            <div class="visual-flow" id="visualFlow"></div>
+          </section>
+
+          <div class="material-extensions" id="materialExtensions" hidden></div>
+
+          <div class="support-grid" id="supportGrid">
+            <section class="support-card" id="keyPointsCard">
+              <div class="support-heading">
+                <span class="support-icon green">✓</span>
+                <h3 id="keyPointsHeading">Poin yang harus kena</h3>
+              </div>
+              <ul id="keyPoints"></ul>
+            </section>
+            <section class="support-card note" id="noteCard">
+              <div class="support-heading">
+                <span class="support-icon amber">!</span>
+                <h3 id="answerNoteHeading">Catatan saat menjawab</h3>
+              </div>
+              <p id="answerNote"></p>
+            </section>
+          </div>
+
+          <section class="hub-details" id="hubDetails" hidden>
+            <div class="hub-section-heading">
+              <span id="fullMaterialLabel">MATERI LENGKAP</span>
+              <small id="fullMaterialHint">Tetap di halaman ini — lompat ke bagian yang dibutuhkan</small>
+            </div>
+            <nav class="hub-jump-links" id="hubJumpLinks" aria-label="Lompat ke subtopik"></nav>
+            <div class="hub-sections" id="hubSections"></div>
+          </section>
+
+          <div class="reference-bar" id="referenceBar">
+            <span id="referenceLabel">REFERENSI MATERI</span>
+            <p id="referenceText"></p>
+          </div>
+
+          <section class="related-section" id="relatedSection">
+            <div class="related-heading">
+              <span id="relatedHeadingLabel">NYAMBUNG KE MATERI</span>
+              <small id="relatedHeadingHint">Klik untuk pindah cepat</small>
+            </div>
+            <div class="related-links" id="relatedLinks"></div>
+          </section>
+        </div>
+
+        <footer class="answer-footer">
+          <button id="prevButton" class="nav-button" type="button">← <span id="prevButtonLabel">Sebelumnya</span></button>
+          <span><b id="currentIndex">1</b> / <span id="totalCount">0</span></span>
+          <button id="nextButton" class="nav-button primary" type="button"><span id="nextButtonLabel">Berikutnya</span> →</button>
+        </footer>
+      </section>
+    </main>
+  </div>
+
+  <div class="toast" id="toast" role="status"></div>
+  <script src="app.js"></script>
+</body>
+</html>
