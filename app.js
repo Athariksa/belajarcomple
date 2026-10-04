@@ -638,6 +638,81 @@ const fatherUpdateTopics = [
 
 topics.push(...fatherUpdateTopics);
 
+const meceUpdateTopics = [
+  {
+    id: "answer-when-unknown", title: "When I Don't Know", category: "Behavioral", question: "Apa yang Anda lakukan kalau mendapat pertanyaan yang jawabannya belum Anda tahu?", duration: 45, sourceNo: "mece",
+    quick: "Kalau saya belum yakin, saya tidak mau bluff atau menebak. Saya akan jujur menyampaikan batas pengetahuan saya, lalu menjelaskan bagian yang memang saya pahami. Setelah itu saya sebutkan cara saya memastikannya, misalnya mengecek well program, procedure, data, atau konfirmasi ke engineer dan leader yang berwenang. Apalagi kalau menyangkut safety atau keputusan operasi, saya lebih memilih verifikasi daripada memberi jawaban yang terdengar yakin tapi belum tentu benar.",
+    full: "Kalau saya mendapat pertanyaan yang detailnya belum saya kuasai, saya tidak akan menutupinya dengan asumsi. Saya akan mengatakan bagian mana yang belum saya yakini, lalu menyampaikan prinsip atau konteks yang memang saya pahami. Berikutnya saya jelaskan langkah verifikasinya: memeriksa well program, current procedure, data operasi, referensi yang berlaku, atau berdiskusi dengan engineer dan leader yang memiliki authority. Kalau keputusan itu berdampak pada safety, well integrity, equipment, atau perubahan program, saya tidak akan mengambil tindakan sebelum dasar dan kewenangannya jelas. Jadi respons saya bukan berhenti di 'saya tidak tahu', tetapi jujur, menunjukkan cara berpikir, dan mencari jawaban yang dapat dipertanggungjawabkan.",
+    points: ["Jangan bluff", "Sampaikan yang diketahui", "Jelaskan cara verifikasi", "Ikuti procedure dan authority"],
+    note: "Gunakan pola: jujur → prinsip yang dipahami → verifikasi → authority. Jangan mengarang angka, limit, atau langkah operasi.", reference: "Update MECE Ayah — Cara Menjawab Saat Tidak Tahu."
+  },
+  {
+    id: "soft-skills", title: "Communication & Leadership", category: "Behavioral", question: "Bagaimana kemampuan komunikasi, leadership, dan presentasi Anda?", duration: 55, sourceNo: "mece",
+    quick: "Saya mengembangkan komunikasi lewat organisasi, project kelompok, dan presentasi teknis selama kuliah. Saya terbiasa menyusun informasi supaya alurnya jelas, membagi pekerjaan ketika memimpin kelompok, dan menyatukan pendapat supaya target tim tetap jalan. Saya cukup nyaman mempresentasikan hasil analisis, tetapi saya juga sadar komunikasi profesional di lingkungan operasi perlu terus diasah, terutama supaya update tetap ringkas, faktual, dan mudah ditindaklanjuti.",
+    full: "Kemampuan komunikasi saya banyak berkembang melalui organisasi, kerja kelompok, kompetisi, dan presentasi akademik. Saya terbiasa menjelaskan ide atau hasil analisis secara terstruktur kepada orang dengan latar belakang yang berbeda. Dalam beberapa tugas saya juga mengambil peran koordinasi: membagi pekerjaan, menyepakati target, menindaklanjuti progress, dan membantu menyatukan pendapat tim. Untuk presentasi, saya cukup nyaman menjelaskan materi teknis secara sistematis. Dalam konteks Operation Engineer, saya melihat skill ini sangat penting karena update harus jelas mengenai status, issue, impact, action owner, dan next plan. Saya tetap terbuka pada feedback karena komunikasi dan leadership profesional perlu terus dikembangkan melalui pengalaman nyata.",
+    points: ["Komunikasi terstruktur", "Koordinasi dan pembagian tugas", "Presentasi teknis", "Terbuka pada feedback"],
+    note: "Kalau diminta bukti, pilih satu organisasi atau project yang benar-benar Anda alami; jangan hanya menyebut sifat.", reference: "Update MECE Ayah — Potensi Pengembangan dan Soft Skill."
+  },
+  {
+    id: "start-date", title: "Availability to Start", category: "Personal", question: "Kalau diterima, kapan Anda bisa mulai bekerja?", duration: 25, sourceNo: "mece",
+    quick: "Saya siap menyesuaikan kebutuhan perusahaan. Karena saat ini saya tidak memiliki keterikatan kerja rutin, saya bisa mulai relatif cepat. Kalau diperlukan waktu untuk administrasi dan persiapan relokasi, sekitar satu minggu menurut saya cukup, tapi tentu saya tetap fleksibel mengikuti jadwal onboarding perusahaan.",
+    full: "Saat ini saya tidak memiliki keterikatan kerja rutin, jadi pada prinsipnya saya siap mulai sesuai kebutuhan perusahaan. Saya hanya perlu menyiapkan administrasi dan relokasi. Sekitar satu minggu menurut saya cukup untuk persiapan tersebut, tetapi saya tetap terbuka untuk menyesuaikan dengan jadwal onboarding, medical, atau proses lain yang ditetapkan perusahaan.",
+    points: ["Ready to start", "Sekitar satu minggu untuk persiapan", "Fleksibel mengikuti onboarding"],
+    note: "Pastikan estimasi satu minggu memang realistis saat interview berlangsung.", reference: "Update MECE Ayah — Last-Minute Scripts."
+  },
+  {
+    id: "interviewer-questions", title: "Questions for Interviewer", category: "Personal", question: "Apakah ada pertanyaan untuk kami?", duration: 40, sourceNo: "mece",
+    quick: "Ada, Pak atau Bu. Untuk engineer yang baru bergabung di posisi ini, seperti apa proses onboarding atau competency development yang biasanya dijalankan? Lalu, kompetensi apa yang paling penting saya kuasai dalam tiga sampai enam bulan pertama supaya saya bisa lebih cepat memberi kontribusi?",
+    full: "Ada, Pak atau Bu. Saya ingin memahami ekspektasi awal untuk posisi ini. Untuk engineer yang baru bergabung, apakah ada proses onboarding, technical training, atau competency development yang terstruktur? Selain itu, menurut Bapak atau Ibu, kompetensi apa yang paling penting saya kuasai dalam tiga sampai enam bulan pertama agar saya bisa cepat beradaptasi dan memberi kontribusi? Kalau masih ada waktu, saya juga ingin tahu apakah tantangan terbesar Operation Engineer di tim ini lebih banyak berada di area teknis, koordinasi operasi, atau pengolahan data.",
+    points: ["Onboarding", "Kompetensi 3–6 bulan", "Orientasi kontribusi", "Tantangan utama tim"],
+    note: "Pilih satu atau dua pertanyaan sesuai waktu. Hindari menanyakan hal yang sudah dijelaskan interviewer.", reference: "Update MECE Ayah — Pertanyaan Penutup."
+  },
+  {
+    id: "target-not-achieved", title: "Target Not Achieved", category: "Problem Solving", question: "Apa yang Anda lakukan jika target pekerjaan tidak tercapai?", duration: 50, sourceNo: "mece",
+    quick: "Saya akan mulai dari fakta, bukan langsung menyalahkan orang. Saya bandingkan target dengan hasil aktual, cari gap dan penyebabnya lewat data serta diskusi dengan pihak terkait, lalu tentukan corrective action, owner, dan waktunya. Setelah tindakan dijalankan, hasilnya perlu dimonitor. Yang penting bukan hanya mengejar target berikutnya, tetapi memastikan penyebabnya dipahami dan pelajarannya masuk ke cara kerja berikutnya.",
+    full: "Kalau target tidak tercapai, pertama saya pastikan definisi target, baseline, dan hasil aktualnya jelas. Saya pisahkan faktor yang sudah terverifikasi dari asumsi, lalu melihat apakah gap berasal dari planning, equipment, material, kondisi lapangan, metode, data, resource, atau koordinasi. Setelah berdiskusi dengan function owner, saya susun action yang memiliki owner, due date, dan indikator hasil. Progress-nya perlu dimonitor dan dibandingkan kembali dengan baseline. Kalau tindakannya efektif, pembelajaran dapat distandardisasi; kalau belum, hipotesis penyebab perlu ditinjau ulang. Saya juga tetap memastikan upaya mengejar target tidak menghilangkan kontrol HSE atau kualitas.",
+    points: ["Target vs actual", "Cari penyebab berbasis data", "Owner + action + due date", "Monitor dan ambil lesson learned"],
+    note: "Hindari jawaban umum seperti 'akan bekerja lebih keras'. Tunjukkan closed-loop problem solving.", reference: "Update MECE Ayah — Simulasi Target Tidak Tercapai."
+  },
+  {
+    id: "simultaneous-issues", title: "Two Issues at Once", category: "Case Study", question: "Bagaimana menentukan prioritas kalau dua masalah muncul bersamaan?", duration: 55, sourceNo: "mece",
+    quick: "Saya tidak memilih berdasarkan siapa yang paling keras meminta bantuan. Prioritas pertama tetap safety dan well integrity. Setelah itu saya lihat severity, dampak ke operasi atau produksi, urgency, resource yang tersedia, dan siapa yang punya authority. Kalau aman dilakukan, pekerjaan bisa dibagi paralel dengan owner yang jelas. Saya tetap memastikan kedua issue tercatat, dimonitor, dan mendapat update supaya tidak ada yang hilang.",
+    full: "Kalau dua issue muncul bersamaan, saya melakukan triage. Pertama saya cek apakah ada risiko terhadap personel, well integrity, lingkungan, atau aset; yang risikonya paling serius harus diamankan terlebih dahulu. Setelah itu saya bandingkan severity, operational atau production impact, urgency, dependency terhadap critical path, resource availability, serta authority yang dibutuhkan. Saya tidak harus mengerjakan semuanya sendiri: issue dapat diarahkan ke owner yang tepat dan ditangani paralel jika aman. Saya kemudian menetapkan action, PIC, waktu update, dan escalation point untuk keduanya. Jadi prioritas dibuat dari risiko dan impact yang terverifikasi, bukan intuisi semata.",
+    points: ["Safety & well integrity", "Severity dan impact", "Right owner & authority", "Parallel action bila aman", "Monitor kedua issue"],
+    note: "Jelaskan kriteria prioritas sebelum memilih tindakan.", reference: "Update MECE Ayah — Case Study Drill."
+  },
+  {
+    id: "phr-safety-frameworks", title: "PIP, CLSR & SIFP", category: "HSE", question: "Bagaimana hubungan PIP, CLSR, SWA, dan SIFP?", duration: 60, sourceNo: "mece",
+    quick: "Saya melihatnya saling melengkapi. PIP adalah perilaku Patuh, Intervensi, dan Peduli. CLSR memberi critical rules untuk aktivitas berisiko tinggi. SWA adalah tindakan nyata untuk mengintervensi atau menghentikan pekerjaan saat kondisinya tidak aman. SIFP menjaga fokus pada pencegahan kejadian yang bisa menyebabkan cedera serius atau fatal. Intinya, aturan harus dipahami, hazard tidak boleh didiamkan, dan pekerjaan baru dilanjutkan setelah control serta readiness terverifikasi.",
+    full: "PIP, CLSR, SWA, dan SIFP saya pahami sebagai lapisan yang saling menguatkan budaya safety. PIP atau Patuh, Intervensi, Peduli membentuk perilaku: mengikuti aturan dan permit, tidak diam saat melihat kondisi tidak aman, serta peduli terhadap rekan, aset, lingkungan, dan tindak lanjut hazard. CLSR memberi critical rules pada aktivitas berisiko tinggi seperti line of fire, lifting, powered system, hot work, confined space, atau working at height sesuai standar yang berlaku. SWA menjadi tindakan konkret untuk mengintervensi atau menghentikan pekerjaan ketika control tidak memadai. SIFP menjaga fokus agar safeguard yang mencegah serious injury dan fatality benar-benar efektif. Detail dan versi aturan tetap harus mengikuti training serta procedure PHR terbaru.",
+    points: ["PIP = Patuh–Intervensi–Peduli", "CLSR = critical rules", "SWA = tindakan intervensi", "SIFP = cegah fatal consequence"],
+    note: "Gunakan istilah CLSR. Untuk daftar, definisi, dan versi terbaru, ikuti training serta procedure resmi perusahaan.", reference: "Update MECE Ayah — PIP, CLSR, SIFP, dan SWA."
+  },
+  {
+    id: "akhlak-values", title: "AKHLAK Values", category: "Company", question: "Nilai AKHLAK apa yang paling relevan dengan cara kerja Anda?", duration: 50, sourceNo: "mece",
+    quick: "AKHLAK berarti Amanah, Kompeten, Harmonis, Loyal, Adaptif, dan Kolaboratif. Kalau dikaitkan dengan diri saya, dua yang paling terasa adalah Kompeten dan Kolaboratif. Saya suka mempelajari dasar teknis sampai paham, tetapi saya juga sadar pekerjaan operasi tidak bisa selesai sendiri. Data, kondisi lapangan, maintenance, HSE, dan engineering harus disatukan lewat komunikasi serta kerja sama yang baik.",
+    full: "Saya memahami AKHLAK sebagai Amanah, Kompeten, Harmonis, Loyal, Adaptif, dan Kolaboratif. Daripada hanya menghafal enam kata, saya akan menghubungkannya dengan perilaku. Amanah berarti jujur pada data dan bertanggung jawab atas tugas. Kompeten berarti terus memperkuat pengetahuan serta tidak berpura-pura tahu. Adaptif terlihat saat menghadapi kondisi aktual yang berbeda dari rencana, sementara Kolaboratif penting karena keputusan operasi melibatkan field team, engineering, HSE, maintenance, vendor, dan fungsi pendukung. Kalau diminta memilih, saya paling dekat dengan Kompeten dan Kolaboratif, dengan bukti dari project lintas disiplin serta kebiasaan menyusun pekerjaan tim secara terstruktur.",
+    points: ["Amanah", "Kompeten", "Adaptif", "Kolaboratif", "Beri bukti perilaku"],
+    note: "Pilih satu atau dua nilai dengan bukti nyata; jangan hanya mengulang enam kata.", reference: "Update MECE Ayah — Nilai AKHLAK BUMN."
+  },
+  {
+    id: "lgowes-capstone", title: "L'GOWES Capstone", category: "Experience", question: "Ceritakan project capstone L'GOWES dan relevansinya.", duration: 65, sourceNo: "mece",
+    quick: "Capstone L'GOWES atau JATAYU adalah project sepeda statis pembangkit listrik yang menggabungkan mechanical dan electrical system. Saya terlibat dalam proses desain, prototyping, testing, dan troubleshooting. Project ini melatih saya melihat sistem secara menyeluruh, karena masalah mekanik bisa memengaruhi output listrik dan sebaliknya. Untuk portfolio, saya ingin menambahkan database Oracle serta RCA sebagai extension analisis, tapi saya akan jelas bahwa itu pengembangan baru, bukan bagian dari capstone aslinya.",
+    full: "L'GOWES atau JATAYU adalah capstone sepeda statis pembangkit listrik yang mencakup mechanical-electrical integration, prototyping, manufacturing atau assembly, testing, dan troubleshooting. Pengalaman itu melatih saya melihat hubungan antarsistem, menjalankan design iteration, dan membandingkan hasil aktual dengan target performa. Sebagai portfolio lanjutan, saya ingin membuat extension data memakai Oracle SQL untuk menyimpan component, test run, measurement, issue, corrective action, dan maintenance, lalu menganalisis salah satu masalah dengan RCA, 5 Why, atau Fishbone. Saya akan menyampaikan batasnya dengan jujur: Oracle dan RCA tersebut adalah portfolio extension, bukan software atau metode yang digunakan pada project capstone asli.",
+    points: ["Mechanical–electrical integration", "Prototype & testing", "Troubleshooting", "Oracle/RCA hanya extension"],
+    note: "Jangan menyebut Oracle atau Python sebagai bagian capstone asli jika memang baru ditambahkan untuk portfolio.", reference: "Update MECE Ayah — Personal Story Bank L'GOWES."
+  },
+  {
+    id: "phr-learning-source", title: "How I Know PHR", category: "Company", question: "Kok Anda tahu cukup banyak tentang lingkungan PHR?", duration: 50, sourceNo: "mece",
+    quick: "Karena ketertarikan saya memang sudah cukup lama dan konsisten. Saat KP saya mendapat exposure langsung dan membawa bahan belajar MAB I serta MAB II, lalu saya tetap membacanya kembali untuk memahami dasar wellwork, completion, rig, dan well control. Saya juga banyak berdiskusi dengan mentor serta ayah saya. Tapi saya tetap membatasi jawaban pada materi belajar dan pengalaman observasi, bukan seolah-olah saya mengetahui informasi confidential atau prosedur terbaru yang belum pernah saya jalankan.",
+    full: "Pengetahuan saya berasal dari kombinasi pengalaman dan proses belajar yang konsisten. Saat KP di PHR saya melihat langsung sebagian workflow Drilling & Well Intervention, Routine Service, Rig Hub, serta penggunaan WellView. Saya juga mendapat materi MAB I dan MAB II yang masih saya gunakan untuk memahami prinsip wellwork, completion, rig, dan well control. Selain itu saya berdiskusi dengan mentor saat KP, teman, dan ayah saya mengenai konteks operasi. Saya selalu menjaga batasnya: handbook lama saya gunakan untuk prinsip serta terminology, sedangkan detail limit, barrier, software workflow, dan procedure aktual harus mengikuti dokumen resmi serta authority terbaru. Jadi saya tidak mengklaim memiliki akses confidential atau pengalaman hands-on yang belum pernah saya lakukan.",
+    points: ["Exposure KP", "MAB I–II", "Diskusi mentor dan ayah", "Tidak overclaim/confidential"],
+    note: "Tunjukkan curiosity dan continuity, sekaligus batas sumber serta pengalaman Anda.", reference: "Update MECE Ayah — PHR Environment dan Batas Penggunaan Referensi."
+  }
+];
+
+topics.push(...meceUpdateTopics);
+
 const material2Supplements = {
   "well-completion": "Materi 2 memperjelas empat konfigurasi utama: open hole, open-hole liner, cased hole, dan cased-hole liner. Untuk cased-hole completion, urutan sederhananya adalah drill to TD → run production casing → cement → drill-out dan evaluasi cement bond → perforate target interval → wash/test → install production equipment. Saat menjelaskan completion, selalu hubungkan dengan well control dan barrier yang aktif pada tiap perubahan konfigurasi.",
   "drilling-to-completion": "Tambahan konteks: wellbore biasanya dibangun bertahap melalui beberapa hole section, casing, dan cementing—bukan satu diameter sampai target. Formation evaluation dapat dilakukan saat drilling melalui MWD/LWD atau setelah interval dibor melalui wireline. Sequence aktual dan tools mengikuti well plan; tidak semua well menggunakan semuanya.",
@@ -691,6 +766,25 @@ Object.entries(fatherUpdateSupplements).forEach(([id, text]) => {
   if (topic) (topic.supplements ||= []).push({ source: "update", label: "UPDATE AYAH", text });
 });
 
+const meceUpdateSupplements = {
+  "about-me": "Gunakan SIPT sebagai alur berpikir, bukan istilah resmi: Study/starting point → Industrial exposure → Projects/problem solving → Target/fit. Aktivitas Himpunan Mahasiswa Mesin, fotografi, atau videografi cukup disebut jika interviewer menggali organisasi; jangan dipaksakan ke setiap perkenalan.",
+  "relocation": "Konteks keluarga: orang tua berada di Cilegon dan Bandung. Karena masih lajang, Anda siap tinggal mandiri dan menetap di Riau bila diterima. Minas–Duri juga familiar karena pernah menjadi tempat tinggal masa kecil. Gunakan kalimat 'air Siak' hanya sebagai ice-breaker bila suasana sudah santai.",
+  "why-phr": "Personal hook tambahan: pumping unit di Minas–Duri dulu hanya menjadi pemandangan masa kecil; setelah belajar Teknik Mesin, Anda memahami hubungan prime mover, gear reducer, walking beam, polished rod, sucker rod, dan downhole pump. Setelah hook ini, tetap kembali ke alasan profesional dan role fit.",
+  "maintenance": "Materi MECE mengingatkan bahwa selain preventive dan corrective maintenance, awareness terhadap predictive atau condition-based maintenance juga relevan. Parameter seperti vibration, temperature, lubrication, performance trend, dan inspection finding dapat membantu mendeteksi degradasi sebelum failure, sesuai strategy dan criticality equipment.",
+  "well-completion": "Materi MECE menegaskan empat tipe completion sebagai keyword: open hole, open-hole liner, cased hole, dan cased-hole liner. Perbedaan utamanya adalah cara interval produktif disangga, diisolasi, dikendalikan, dan dihubungkan ke wellbore; pemilihannya mengikuti formation, sand-control need, reservoir objective, dan well design.",
+  "rig-components": "Tambahan MECE: lihat personel sebagai struktur koordinasi, bukan daftar jabatan. WSR mewakili sisi operator/site, Tool Pusher memimpin rig crew, Driller mengoperasikan kontrol rig, Derrickman bekerja di mast/monkeyboard, Floorman menangani aktivitas rig floor, dan Roustabout memberi general support. Authority detail mengikuti organisasi site.",
+  "kp-phr": "Gunakan tanggal resmi 20 Januari–28 Februari 2025, sekitar 30 hari kerja atau 1,5 bulan. Nama personel BMS tidak tercatat lengkap pada laporan; cek kembali kontak atau catatan pribadi dan jangan mengarang bila lupa.",
+  "study-case": "Jika actual well condition berbeda dari program, amankan kondisi, dokumentasikan finding, cek objective dan approved best practice, klasifikasikan apakah program/design, operational, well condition, atau logistics issue, lalu eskalasi ke authority. Jangan mengubah well program sendiri.",
+  "tight-deadline": "Kalau dua pekerjaan sama-sama mendesak, gunakan triage: safety/well integrity → severity → operational/production impact → urgency/critical path → resource dan authority. Pekerjaan dapat diparalelkan bila aman, dengan owner dan waktu update yang jelas.",
+  "phr-sifp": "Hubungkan SIFP dengan PIP, CLSR, dan SWA: CLSR memberi critical rules, PIP membentuk perilaku Patuh–Intervensi–Peduli, SWA menjadi tindakan intervensi, dan SIFP memastikan safeguard terhadap fatal consequence benar-benar efektif. Detail selalu mengikuti training/procedure terbaru.",
+  "closing": "Setelah closing, siapkan satu pertanyaan yang menunjukkan orientasi kontribusi: kompetensi apa yang paling penting dikuasai dalam tiga sampai enam bulan pertama, atau tantangan terbesar tim berada di area teknis, koordinasi operasi, atau data."
+};
+
+Object.entries(meceUpdateSupplements).forEach(([id, text]) => {
+  const topic = topics.find(item => item.id === id);
+  if (topic) (topic.supplements ||= []).push({ source: "mece", label: "UPDATE MECE AYAH", text });
+});
+
 const continuousImprovementTopic = topics.find(topic => topic.id === "continuous-improvement");
 if (continuousImprovementTopic) {
   continuousImprovementTopic.full = "Saya memahami Continuous Improvement sebagai perbaikan sistematis berbasis data untuk meningkatkan safety, reliability, quality, cost, dan efisiensi. Saya melihat tools-nya sebagai satu rangkaian yang saling melengkapi. Data dan Pareto membantu memilih masalah yang paling berdampak. Fishbone 6M membantu membuka kemungkinan penyebab dari sisi Man, Machine, Method, Material, Measurement, dan Environment. Setelah itu 5 Why dapat dipakai untuk memperdalam causal chain, sedangkan RCA memvalidasi root cause dengan evidence. Action kemudian dijalankan melalui PDCA: pada tahap Plan kita mendefinisikan gap, baseline, target, penyebab, dan risk control; Do menjalankan solusi secara terkontrol; Check membandingkan hasil dengan baseline serta melihat unintended consequence; dan Act menstandardisasi solusi yang efektif atau merevisi hipotesis bila hasilnya belum tercapai. Untuk Operation Engineer, perbaikan belum selesai hanya karena action sudah dilakukan—hasilnya perlu diverifikasi dan recurrence harus dicegah.";
@@ -721,7 +815,16 @@ const relationGroups = [
   ["phr-sifp", "hse", "risk-assessment", "unsafe-condition", "safety-vs-production"],
   ["well-types", "well-lifecycle", "artificial-lift", "production-system", "production-drop"],
   ["centrifugal-pump", "pump-failure", "maintenance", "production-system", "artificial-lift"],
-  ["production-system", "operation-engineer", "production-drop", "well-types", "operational-update"]
+  ["production-system", "operation-engineer", "production-drop", "well-types", "operational-update"],
+  ["answer-when-unknown", "integrity", "supervisor-disagreement", "soft-skills", "study-case"],
+  ["start-date", "current-status", "relocation", "work-24-7", "job-expectation"],
+  ["interviewer-questions", "closing", "job-expectation", "five-years"],
+  ["target-not-achieved", "continuous-improvement", "root-cause-analysis", "operational-update", "npt-analysis"],
+  ["simultaneous-issues", "study-case", "tight-deadline", "job-delay", "safety-vs-production"],
+  ["phr-safety-frameworks", "phr-sifp", "hse", "unsafe-condition", "risk-assessment"],
+  ["akhlak-values", "integrity", "soft-skills", "phr", "why-hire-me"],
+  ["lgowes-capstone", "mud-competition", "ta-calcium-looping", "pln-experience", "software"],
+  ["phr-learning-source", "phr", "why-phr", "kp-phr", "wellview"]
 ];
 
 const hubDefinitions = [
@@ -1034,6 +1137,16 @@ const englishAnswers = {
   "well-types": "By function, I understand producer wells, water injectors, steam injectors, disposal wells, and observation wells. Producers deliver reservoir fluids, injectors support the reservoir strategy, disposal wells place fluids in an approved zone, and observation wells monitor reservoir conditions. Each type therefore has different operating parameters and risks.",
   "centrifugal-pump": "A centrifugal pump converts mechanical energy from a motor into fluid energy. The impeller accelerates the fluid, while the volute or diffuser converts part of that velocity into pressure or head. Important concepts include the head-flow relationship, operation near BEP, suction conditions, NPSH, and cavitation indicators such as noise, vibration, and reduced performance.",
   "production-system": "At a high level, fluids leave the well through the wellhead, flow through a flowline or manifold, enter a separator for phase separation, continue to a tank or treatment stage, and are then transferred by pumps. Key parameters include pressure, temperature, flow, level, equipment status, alarms, leakage, and deviations from the operating envelope.",
+  "answer-when-unknown": "If I am not certain about a technical detail, I will not bluff or guess. I will honestly state the limit of my knowledge, explain the principle I do understand, and describe how I would verify it through the well program, current procedure, operating data, or the authorized engineer or leader. Especially for safety or operational decisions, a verified answer is more important than sounding confident.",
+  "soft-skills": "I developed my communication skills through organizations, team projects, competitions, and technical presentations. I am used to organizing information clearly, coordinating tasks, and aligning different opinions toward a shared target. I am also comfortable presenting analysis, while remaining open to feedback because professional communication and leadership must continue to improve through real operating experience.",
+  "start-date": "I am available to start according to the company's needs. Since I am not currently bound by a full-time employment commitment, I can start relatively quickly. If time is needed for administration and relocation, approximately one week should be sufficient, while I remain flexible regarding the company's onboarding schedule.",
+  "interviewer-questions": "Yes, thank you. For a new engineer joining this position, what does the onboarding or competency-development process usually look like? Also, which competencies would you consider the most important for me to build during my first three to six months so I can contribute more quickly?",
+  "target-not-achieved": "If a target is not achieved, I start with the facts instead of blaming people. I compare the target with the actual result, identify the gap and possible causes using data and discussion with the relevant team, and define a corrective action with a clear owner and due date. I then monitor the result and capture the lesson so the next cycle improves without compromising HSE or quality.",
+  "simultaneous-issues": "If two issues occur at the same time, I use a triage approach. Safety and well integrity come first, followed by severity, operational or production impact, urgency, available resources, and authority. When it is safe, the issues can be handled in parallel by the appropriate owners. Both still need a clear action, escalation point, and update time so neither issue is lost.",
+  "phr-safety-frameworks": "I see PIP, CLSR, SWA, and SIFP as complementary. PIP represents the behaviors of compliance, intervention, and care. CLSR provides critical rules for high-risk activities. SWA is the concrete action to intervene or stop unsafe work, while SIFP focuses on preventing events that could cause serious injury or fatality. The current company training and procedures remain the authority for the exact requirements.",
+  "akhlak-values": "AKHLAK stands for Amanah, Kompeten, Harmonis, Loyal, Adaptif, and Kolaboratif. Rather than only memorizing the words, I connect them to behavior. For example, being competent means strengthening my technical understanding and admitting when verification is needed, while being collaborative means connecting field facts, engineering, HSE, maintenance, and support functions to reach a safe and effective decision.",
+  "lgowes-capstone": "L'GOWES, also called JATAYU, was a stationary-bicycle electricity-generation capstone involving mechanical-electrical integration, prototyping, testing, and troubleshooting. It trained me to see the system as a whole and compare actual performance with the design target. I may build an Oracle and RCA portfolio extension from the project, but I will clearly state that those are new extensions rather than part of the original capstone.",
+  "phr-learning-source": "My understanding comes from consistent learning and direct exposure. During my PHR internship, I observed parts of the Drilling and Well Intervention, Routine Service, Rig Hub, and WellView workflows. I continued studying MAB I and MAB II and discussing the concepts with mentors and my father. I still distinguish learning references from current approved procedures and never claim confidential access or hands-on experience that I do not have.",
   "hub-sql": "When explaining SQL, I start with the question and the data grain. I then select the source, filter the rows, join tables when needed, build the aggregation or classification, and sort or analyze the result by group. I also check NULLs, keys, cardinality, and duplicates so a syntactically valid query also produces a correct result. All SQL topics are available on this page."
 };
 
@@ -1073,7 +1186,265 @@ const englishQuestions = {
   "why-oil-gas": "Why do you want to work in oil and gas?",
   "why-phr": "Why do you want to join PHR?",
   "work-24-7": "Are you ready for field work, shifts, and call-outs?",
-  "closing": "Do you have a closing statement?"
+  "closing": "Do you have a closing statement?",
+  "answer-when-unknown": "What would you do if you did not know the answer to a technical question?",
+  "soft-skills": "How would you describe your communication, leadership, and presentation skills?",
+  "start-date": "If selected, when would you be available to start?",
+  "interviewer-questions": "Do you have any questions for us?",
+  "target-not-achieved": "What would you do if a work target was not achieved?",
+  "simultaneous-issues": "How would you prioritize two issues occurring at the same time?",
+  "phr-safety-frameworks": "How are PIP, CLSR, SWA, and SIFP related?",
+  "akhlak-values": "Which AKHLAK values are most relevant to the way you work?",
+  "lgowes-capstone": "Could you explain your L'GOWES capstone and its relevance?",
+  "phr-learning-source": "How did you learn so much about PHR's operating environment?"
+};
+
+const dual = (id, en) => ({ id, en });
+
+const visualBlueprints = {
+  "about-me": {
+    type: "flow",
+    nodes: [
+      [dual("Study", "Study"), dual("Teknik Mesin ITB", "Mechanical Engineering, ITB")],
+      [dual("Explore", "Explore"), dual("Aviasi • energi • project", "Aviation • energy • projects")],
+      [dual("Exposure", "Exposure"), dual("PHR • PLN", "PHR • PLN")],
+      [dual("Evidence", "Evidence"), dual("Equipment • data • problem solving", "Equipment • data • problem solving")],
+      [dual("Fit", "Fit"), dual("Operation Engineer", "Operation Engineer")]
+    ]
+  },
+  "completion-engineer": {
+    type: "flow",
+    nodes: [
+      [dual("Recommendation", "Recommendation"), dual("Objective sumur", "Well objective")],
+      [dual("Review", "Review"), dual("History • design • risk", "History • design • risk")],
+      [dual("Readiness", "Readiness"), dual("Equipment • material • cost", "Equipment • material • cost")],
+      [dual("Execute", "Execute"), dual("Program yang aman", "Safe executable program")],
+      [dual("Feedback", "Feedback"), dual("Actual • report • improvement", "Actual • report • improvement")]
+    ]
+  },
+  "well-lifecycle": {
+    type: "flow",
+    nodes: [
+      [dual("Drill", "Drill"), dual("Build wellbore", "Build wellbore")],
+      [dual("Evaluate", "Evaluate"), dual("Kenali formasi", "Understand formation")],
+      [dual("Case & Cement", "Case & Cement"), dual("Integrity • isolation", "Integrity • isolation")],
+      [dual("Complete", "Complete"), dual("Buat jalur produksi", "Create production path")],
+      [dual("Produce", "Produce"), dual("Monitor performance", "Monitor performance")],
+      [dual("Intervene", "Intervene"), dual("Service • workover • P&A", "Service • workover • P&A")]
+    ]
+  },
+  "well-completion": {
+    type: "table",
+    headers: [dual("Tipe", "Type"), dual("Akses reservoir", "Reservoir access"), dual("Keyword", "Keyword")],
+    rows: [
+      [dual("Open Hole", "Open Hole"), dual("Zona produktif tetap terbuka", "Productive interval remains open"), dual("Bare interval", "Bare interval")],
+      [dual("Open-Hole Liner", "Open-Hole Liner"), dual("Open hole + liner/screen", "Open hole + liner/screen"), dual("Sand control", "Sand control")],
+      [dual("Cased Hole", "Cased Hole"), dual("Casing + cement + perforasi", "Casing + cement + perforation"), dual("Zonal control", "Zonal control")],
+      [dual("Cased-Hole Liner", "Cased-Hole Liner"), dual("Cased hole + screen/liner", "Cased hole + screen/liner"), dual("CHGP", "CHGP")]
+    ]
+  },
+  "workover-vs-service": {
+    type: "compare",
+    columns: [
+      { title: dual("Well Service", "Well Service"), items: [dual("Restore function", "Restore function"), dual("Change-out pump", "Change-out pump"), dual("Clean out sand", "Clean out sand"), dual("Lebih rutin", "More routine")] },
+      { title: dual("Workover", "Workover"), items: [dual("Change / repair downhole", "Change / repair downhole"), dual("Perforation • fishing", "Perforation • fishing"), dual("Cementing • acidizing", "Cementing • acidizing"), dual("Program-specific", "Program-specific")] }
+    ]
+  },
+  "maintenance": {
+    type: "compare",
+    columns: [
+      { title: dual("Preventive", "Preventive"), items: [dual("Sebelum gagal", "Before failure"), dual("Schedule / interval", "Schedule / interval"), dual("Kurangi probability", "Reduce probability"), dual("Condition awareness", "Condition awareness")] },
+      { title: dual("Corrective", "Corrective"), items: [dual("Setelah failure/degradasi", "After failure/degradation"), dual("Restore function", "Restore function"), dual("Prioritas criticality", "Prioritize by criticality"), dual("Verify performance", "Verify performance")] }
+    ]
+  },
+  "rig-systems": {
+    type: "table",
+    headers: [dual("Sistem", "System"), dual("Fungsi", "Function"), dual("Contoh", "Examples")],
+    rows: [
+      [dual("Hoisting", "Hoisting"), dual("Angkat / turunkan string", "Raise / lower string"), dual("Mast • drawworks", "Mast • drawworks")],
+      [dual("Rotating", "Rotating"), dual("Memberi putaran", "Provide rotation"), dual("Top drive • swivel", "Top drive • swivel")],
+      [dual("Circulating", "Circulating"), dual("Sirkulasi dan cleaning", "Circulation and cleaning"), dual("Pump • tank • return", "Pump • tank • return")],
+      [dual("Well Control", "Well Control"), dual("Kendalikan pressure/barrier", "Control pressure/barriers"), dual("BOP • valve • choke", "BOP • valve • choke")],
+      [dual("Power", "Power"), dual("Energi seluruh sistem", "Power all systems"), dual("Engine • hydraulic", "Engine • hydraulic")]
+    ]
+  },
+  "well-control": {
+    type: "flow",
+    nodes: [
+      [dual("Formation", "Formation"), dual("Pf mendorong fluida", "Formation pressure drives fluid")],
+      [dual("Primary", "Primary"), dual("Hydrostatic pressure", "Hydrostatic pressure")],
+      [dual("Detect", "Detect"), dual("Kenali influx lebih awal", "Recognize influx early")],
+      [dual("Secondary", "Secondary"), dual("Shut-in • BOPE", "Shut-in • BOPE")],
+      [dual("Control", "Control"), dual("Procedure • authority", "Procedure • authority")]
+    ]
+  },
+  "rig-hub-workflow": {
+    type: "flow",
+    nodes: [
+      [dual("WRO", "WRO"), dual("Well recommendation", "Well recommendation")],
+      [dual("LSC", "LSC"), dual("Location • material • readiness", "Location • material • readiness")],
+      [dual("Scheduler", "Scheduler"), dual("Candidate + rig", "Candidate + rig")],
+      [dual("Rig Site", "Rig Site"), dual("Operational gate", "Operational gate")],
+      [dual("CE", "CE"), dual("Engineering gate", "Engineering gate")],
+      [dual("Execute", "Execute"), dual("Program + feedback", "Program + feedback")]
+    ]
+  },
+  "study-case": {
+    type: "flow",
+    nodes: [
+      [dual("SAFE", "SAFE"), dual("People • well • asset", "People • well • asset")],
+      [dual("VERIFY", "VERIFY"), dual("Fact ≠ assumption", "Fact ≠ assumption")],
+      [dual("IMPACT", "IMPACT"), dual("Safety • time • cost", "Safety • time • cost")],
+      [dual("CLASSIFY", "CLASSIFY"), dual("Design • ops • logistics", "Design • ops • logistics")],
+      [dual("ACT", "ACT"), dual("Right owner / escalate", "Right owner / escalate")],
+      [dual("CLOSE", "CLOSE"), dual("Monitor • report", "Monitor • report")]
+    ]
+  },
+  "answer-when-unknown": {
+    type: "flow",
+    nodes: [
+      [dual("Jujur", "Be honest"), dual("Sebut batas pengetahuan", "State the knowledge limit")],
+      [dual("Prinsip", "Principle"), dual("Jelaskan yang dipahami", "Explain what you understand")],
+      [dual("Verifikasi", "Verify"), dual("Program • procedure • data", "Program • procedure • data")],
+      [dual("Authority", "Authority"), dual("Konfirmasi pihak berwenang", "Confirm with authorized person")],
+      [dual("Safe Answer", "Safe Answer"), dual("Jangan bluff", "Never bluff")]
+    ]
+  },
+  "simultaneous-issues": {
+    type: "priority",
+    nodes: [
+      [dual("Safety & well integrity", "Safety & well integrity"), dual("Amankan risiko tertinggi", "Secure the highest risk")],
+      [dual("Severity", "Severity"), dual("Besarnya konsekuensi", "Magnitude of consequence")],
+      [dual("Impact & urgency", "Impact & urgency"), dual("Critical path • production", "Critical path • production")],
+      [dual("Owner & resource", "Owner & resource"), dual("Authority dan kapasitas", "Authority and capacity")],
+      [dual("Parallel + monitor", "Parallel + monitor"), dual("Bila aman, PIC dan update jelas", "If safe, clear owner and update")]
+    ]
+  },
+  "phr-safety-frameworks": {
+    type: "table",
+    headers: [dual("Framework", "Framework"), dual("Peran", "Role"), dual("Perilaku", "Behavior")],
+    rows: [
+      [dual("PIP", "PIP"), dual("Golden behavior", "Golden behavior"), dual("Patuh • Intervensi • Peduli", "Comply • Intervene • Care")],
+      [dual("CLSR", "CLSR"), dual("Critical rules", "Critical rules"), dual("Aktivitas high-risk", "High-risk activities")],
+      [dual("SWA", "SWA"), dual("Concrete action", "Concrete action"), dual("Stop / intervene", "Stop / intervene")],
+      [dual("SIFP", "SIFP"), dual("Fatal-risk focus", "Fatal-risk focus"), dual("Verify safeguards", "Verify safeguards")]
+    ]
+  },
+  "continuous-improvement": {
+    type: "flow",
+    nodes: [
+      [dual("Data", "Data"), dual("Problem + baseline", "Problem + baseline")],
+      [dual("Pareto", "Pareto"), dual("Pilih impact terbesar", "Prioritize highest impact")],
+      [dual("Fishbone", "Fishbone"), dual("Buka kemungkinan", "Explore possible causes")],
+      [dual("5 Why / RCA", "5 Why / RCA"), dual("Validasi root cause", "Validate root cause")],
+      [dual("PDCA", "PDCA"), dual("Action • check • standardize", "Action • check • standardize")]
+    ]
+  },
+  "data-tool-strategy": {
+    type: "flow",
+    nodes: [
+      [dual("Source", "Source"), dual("WellView / database", "WellView / database")],
+      [dual("SQL", "SQL"), dual("Retrieve • join • summarize", "Retrieve • join • summarize")],
+      [dual("Excel", "Excel"), dual("Validate • analyze", "Validate • analyze")],
+      [dual("Power BI", "Power BI"), dual("Monitor • visualize", "Monitor • visualize")],
+      [dual("Decision", "Decision"), dual("Insight → action", "Insight → action")]
+    ]
+  },
+  "pump-failure": {
+    type: "priority",
+    nodes: [
+      [dual("Make safe", "Make safe"), dual("Jangan langsung restart", "Do not restart immediately")],
+      [dual("Verify", "Verify"), dual("Alarm • field condition", "Alarm • field condition")],
+      [dual("Check", "Check"), dual("Power • suction • discharge", "Power • suction • discharge")],
+      [dual("Coordinate", "Coordinate"), dual("Operator • maintenance", "Operator • maintenance")],
+      [dual("Clearance", "Clearance"), dual("Restart sesuai authority", "Restart with proper authority")]
+    ]
+  },
+  "production-drop": {
+    type: "priority",
+    nodes: [
+      [dual("Validate data", "Validate data"), dual("Pastikan penurunan nyata", "Confirm the drop is real")],
+      [dual("Compare trend", "Compare trend"), dual("Baseline • event timeline", "Baseline • event timeline")],
+      [dual("Split causes", "Split causes"), dual("Well • lift • facility • data", "Well • lift • facility • data")],
+      [dual("Confirm", "Confirm"), dual("Evidence + function owner", "Evidence + function owner")],
+      [dual("Act & monitor", "Act & monitor"), dual("Corrective action", "Corrective action")]
+    ]
+  },
+  "operational-update": {
+    type: "flow",
+    nodes: [
+      [dual("STATUS", "STATUS"), dual("Aktivitas sekarang", "Current activity")],
+      [dual("PROGRESS", "PROGRESS"), dual("Plan vs actual", "Plan vs actual")],
+      [dual("ISSUE", "ISSUE"), dual("Fakta terverifikasi", "Verified fact")],
+      [dual("IMPACT", "IMPACT"), dual("Safety • time • cost", "Safety • time • cost")],
+      [dual("ACTION", "ACTION"), dual("Owner + tindakan", "Owner + action")],
+      [dual("NEXT", "NEXT"), dual("Plan + update time", "Plan + update time")]
+    ]
+  },
+  "well-types": {
+    type: "table",
+    headers: [dual("Tipe", "Type"), dual("Tujuan", "Purpose"), dual("Fokus operasi", "Operating focus")],
+    rows: [
+      [dual("Producer", "Producer"), dual("Menghasilkan fluida", "Produce reservoir fluids"), dual("Rate • lift • integrity", "Rate • lift • integrity")],
+      [dual("Water Injector", "Water Injector"), dual("Pressure support", "Pressure support"), dual("Rate • pressure • injectivity", "Rate • pressure • injectivity")],
+      [dual("Steam Injector", "Steam Injector"), dual("Thermal recovery", "Thermal recovery"), dual("Pressure • temperature", "Pressure • temperature")],
+      [dual("Disposal", "Disposal"), dual("Penempatan fluida", "Fluid disposal"), dual("Compliance • integrity", "Compliance • integrity")],
+      [dual("Observation", "Observation"), dual("Monitoring reservoir", "Reservoir monitoring"), dual("Data quality", "Data quality")]
+    ]
+  },
+  "artificial-lift": {
+    type: "table",
+    headers: [dual("Sistem", "System"), dual("Prinsip", "Principle"), dual("Keyword", "Keyword")],
+    rows: [
+      [dual("SRP", "SRP"), dual("Surface unit + rod", "Surface unit + rod"), dual("Reciprocating", "Reciprocating")],
+      [dual("HPU", "HPU"), dual("Hydraulic drive", "Hydraulic drive"), dual("Rod/plunger motion", "Rod/plunger motion")],
+      [dual("ESP", "ESP"), dual("Downhole motor + stages", "Downhole motor + stages"), dual("High-rate centrifugal", "High-rate centrifugal")],
+      [dual("PCP", "PCP"), dual("Rotor + stator", "Rotor + stator"), dual("Positive displacement", "Positive displacement")]
+    ]
+  },
+  "centrifugal-pump": {
+    type: "flow",
+    nodes: [
+      [dual("Suction", "Suction"), dual("Fluida ke eye impeller", "Fluid enters impeller eye")],
+      [dual("Impeller", "Impeller"), dual("Tambah velocity/energy", "Adds velocity/energy")],
+      [dual("Volute", "Volute"), dual("Velocity → pressure/head", "Velocity → pressure/head")],
+      [dual("Operate", "Operate"), dual("Curve • BEP • NPSH", "Curve • BEP • NPSH")],
+      [dual("Monitor", "Monitor"), dual("Noise • vibration • seal", "Noise • vibration • seal")]
+    ]
+  },
+  "power-bi-workflow": {
+    type: "flow",
+    nodes: [
+      [dual("Source", "Source"), dual("File / database", "File / database")],
+      [dual("Transform", "Transform"), dual("Power Query", "Power Query")],
+      [dual("Model", "Model"), dual("Fact • dimension", "Fact • dimension")],
+      [dual("Measure", "Measure"), dual("DAX + KPI", "DAX + KPI")],
+      [dual("Visual", "Visual"), dual("KPI • trend • breakdown", "KPI • trend • breakdown")],
+      [dual("Decide", "Decide"), dual("Owner + action", "Owner + action")]
+    ]
+  },
+  "target-not-achieved": {
+    type: "flow",
+    nodes: [
+      [dual("Gap", "Gap"), dual("Target vs actual", "Target vs actual")],
+      [dual("Facts", "Facts"), dual("Data • timeline", "Data • timeline")],
+      [dual("Cause", "Cause"), dual("Verify root cause", "Verify root cause")],
+      [dual("Action", "Action"), dual("Owner • due date", "Owner • due date")],
+      [dual("Check", "Check"), dual("Monitor result", "Monitor result")],
+      [dual("Learn", "Learn"), dual("Standardize / adjust", "Standardize / adjust")]
+    ]
+  },
+  "hub-sql": {
+    type: "flow",
+    nodes: [
+      [dual("Ask", "Ask"), dual("Question + output", "Question + output")],
+      [dual("Define", "Define"), dual("Grain + source", "Grain + source")],
+      [dual("Shape", "Shape"), dual("Filter + join", "Filter + join")],
+      [dual("Analyze", "Analyze"), dual("Aggregate + window", "Aggregate + window")],
+      [dual("Validate", "Validate"), dual("NULL + duplicate", "NULL + duplicate")],
+      [dual("Explain", "Explain"), dual("Logic + insight", "Logic + insight")]
+    ]
+  }
 };
 
 Object.entries(spokenOverrides).forEach(([id, quick]) => {
@@ -1105,6 +1476,7 @@ const state = {
     return groupedTopicToHub.get(requested) || requested;
   })(),
   mode: "quick",
+  view: new URLSearchParams(location.search).get("view") === "script" || localStorage.getItem("interview-answer-view") === "script" ? "script" : "visual",
   language: new URLSearchParams(location.search).get("lang") === "en" || localStorage.getItem("interview-language") === "en" ? "en" : "id",
   category: "Semua",
   query: "",
@@ -1121,7 +1493,8 @@ const els = Object.fromEntries([
   "hubVisual", "visualFlow", "hubDetails", "hubJumpLinks", "hubSections", "languageSwitch",
   "favoritesLabel", "copyButtonLabel", "keywordLabel", "supportGrid", "keyPointsHeading", "answerNoteHeading",
   "referenceBar", "referenceLabel", "relatedHeadingLabel", "relatedHeadingHint", "prevButtonLabel", "nextButtonLabel",
-  "sourcePillText", "visualMapLabel", "visualMapHint", "fullMaterialLabel", "fullMaterialHint"
+  "sourcePillText", "visualMapLabel", "visualMapHint", "fullMaterialLabel", "fullMaterialHint", "visualCuePanel",
+  "visualCue", "visualCueEyebrow", "visualCueTitle", "visualCueKind", "visualPrompt", "scriptCard"
 ].map(id => [id, document.getElementById(id)]));
 
 const categories = ["Semua", ...new Set(displayTopics.map(topic => topic.category))];
@@ -1136,6 +1509,95 @@ const topicQuestion = topic => isEnglish()
   : topic.question;
 const topicAnswer = topic => isEnglish() ? (englishAnswers[topic.id] || topic.quick) : topic[state.mode];
 const sortedTopics = () => [...displayTopics].sort((a, b) => topicTitle(a).localeCompare(topicTitle(b), state.language));
+
+const visualText = value => {
+  if (value && typeof value === "object" && !Array.isArray(value)) return isEnglish() ? value.en : value.id;
+  return String(value || "");
+};
+
+function fallbackVisualPoints(topic) {
+  if (!isEnglish()) return topic.points.slice(0, 6).map(point => [point, ""]);
+  const byCategory = {
+    "Personal": [["Context", "Start with the direct answer"], ["Evidence", "Use one relevant proof"], ["Fit", "Connect it to the role"], ["Commitment", "Close with readiness"]],
+    "Behavioral": [["Principle", "State your mindset"], ["Evidence", "Use a real example"], ["Action", "Explain what you did"], ["Learning", "Show improvement"]],
+    "Experience": [["Situation", "Set the context"], ["Task", "Clarify your responsibility"], ["Action", "Explain your contribution"], ["Result", "Close with relevance"]],
+    "Company": [["Fact", "State what you know"], ["Meaning", "Explain why it matters"], ["Evidence", "Connect to your exposure"], ["Fit", "Link back to the role"]],
+    "Motivation": [["Personal hook", "Keep it brief"], ["Professional proof", "Show deliberate effort"], ["Role fit", "Explain the connection"], ["Commitment", "Close clearly"]],
+    "HSE": [["Hazard", "Recognize the exposure"], ["Control", "Apply the right safeguards"], ["Verify", "Confirm readiness"], ["Resume", "Continue only when safe"]],
+    "Problem Solving": [["Define", "Clarify the gap"], ["Verify", "Separate facts from assumptions"], ["Act", "Assign the right owner"], ["Check", "Monitor the result"]],
+    "Case Study": [["Make safe", "Protect people and integrity"], ["Verify facts", "Do not guess"], ["Coordinate", "Use the right authority"], ["Close loop", "Monitor and report"]],
+    "Data & Software": [["Source", "Know the data origin"], ["Validate", "Check grain and quality"], ["Analyze", "Use the right tool"], ["Decide", "End with an action"]],
+    "SQL": [["Question", "Define the output"], ["Grain", "Choose the correct source"], ["Logic", "Filter, join, aggregate"], ["Validate", "Check NULLs and duplicates"]],
+    "Excel": [["Structure", "Keep the table clean"], ["Calculate", "Choose the right formula"], ["Check", "Validate the result"], ["Explain", "Turn output into insight"]],
+    "Power BI": [["Source", "Prepare reliable data"], ["Model", "Build correct relationships"], ["Visual", "Show KPI to detail"], ["Decision", "End with owner and action"]]
+  };
+  return byCategory[topic.category] || [["Definition", "Explain the core idea"], ["Purpose", "Why it matters"], ["Key elements", "Name the main parts"], ["Safe use", "Close with limits and procedure"]];
+}
+
+function inferVisualType(topic) {
+  if (["Personal", "Behavioral", "Experience", "Company", "Motivation"].includes(topic.category)) return "orbit";
+  if (["HSE", "Problem Solving", "Case Study"].includes(topic.category)) return "priority";
+  return "flow";
+}
+
+function renderVisualCue(topic) {
+  const blueprint = visualBlueprints[topic.id];
+  const type = blueprint?.type || inferVisualType(topic);
+  const typeLabels = {
+    flow: isEnglish() ? "FLOW" : "ALUR",
+    orbit: isEnglish() ? "KEYWORDS" : "KATA KUNCI",
+    compare: isEnglish() ? "COMPARE" : "PERBANDINGAN",
+    table: isEnglish() ? "TABLE" : "TABEL",
+    priority: isEnglish() ? "PRIORITY" : "PRIORITAS"
+  };
+  els.visualCueEyebrow.textContent = isEnglish() ? "ANSWER MAP" : "PETA JAWABAN";
+  els.visualCueTitle.textContent = isEnglish() ? "Use the cues, then answer in your own words" : "Lihat keyword, lalu jawab dengan kata sendiri";
+  els.visualCueKind.textContent = typeLabels[type];
+
+  if (type === "table" && blueprint) {
+    const headers = blueprint.headers.map(header => `<th>${escapeHtml(visualText(header))}</th>`).join("");
+    const rows = blueprint.rows.map(row => `<tr>${row.map(cell => `<td>${escapeHtml(visualText(cell))}</td>`).join("")}</tr>`).join("");
+    els.visualCue.innerHTML = `<div class="cue-table-wrap"><table class="cue-table"><thead><tr>${headers}</tr></thead><tbody>${rows}</tbody></table></div>`;
+    const first = visualText(blueprint.rows[0][0]);
+    const last = visualText(blueprint.rows[blueprint.rows.length - 1][0]);
+    els.visualPrompt.textContent = isEnglish() ? `Start with the definition, compare ${first} through ${last}, then close with selection based on the actual design and procedure.` : `Mulai dari definisi, bandingkan ${first} sampai ${last}, lalu tutup dengan pemilihan yang mengikuti desain dan prosedur aktual.`;
+    return;
+  }
+
+  if (type === "compare" && blueprint) {
+    els.visualCue.innerHTML = `<div class="cue-compare">${blueprint.columns.map(column => `
+      <section class="cue-compare-column"><h4>${escapeHtml(visualText(column.title))}</h4><ul>${column.items.map(item => `<li>${escapeHtml(visualText(item))}</li>`).join("")}</ul></section>
+    `).join("")}</div>`;
+    els.visualPrompt.textContent = isEnglish() ? "Answer with one clear distinction, give two examples from each side, then mention that the final classification follows company scope and procedure." : "Jawab dengan satu pembeda utama, beri dua contoh dari masing-masing sisi, lalu sebutkan bahwa klasifikasi akhirnya mengikuti scope dan prosedur perusahaan.";
+    return;
+  }
+
+  const nodes = (blueprint?.nodes || fallbackVisualPoints(topic)).map(([label, detail]) => ({ label: visualText(label), detail: visualText(detail) }));
+
+  if (type === "orbit") {
+    els.visualCue.innerHTML = `<div class="cue-orbit"><div class="cue-orbit-center">${escapeHtml(topicTitle(topic))}</div><div class="cue-orbit-items">${nodes.map(node => `<div class="cue-orbit-item">${escapeHtml(node.label)}${node.detail ? ` — ${escapeHtml(node.detail)}` : ""}</div>`).join("")}</div></div>`;
+  } else if (type === "priority") {
+    els.visualCue.innerHTML = `<div class="cue-priority">${nodes.map((node, index) => `<div class="cue-priority-item"><span class="cue-number">${index + 1}</span><div><b>${escapeHtml(node.label)}</b>${node.detail ? `<small>${escapeHtml(node.detail)}</small>` : ""}</div></div>`).join("")}</div>`;
+  } else {
+    els.visualCue.innerHTML = `<div class="cue-flow">${nodes.map((node, index) => `<div class="cue-step"><span class="cue-number">${index + 1}</span><b>${escapeHtml(node.label)}</b>${node.detail ? `<small>${escapeHtml(node.detail)}</small>` : ""}</div>`).join("")}</div>`;
+  }
+
+  const first = nodes[0]?.label || topicTitle(topic);
+  const last = nodes[nodes.length - 1]?.label || topicTitle(topic);
+  els.visualPrompt.textContent = isEnglish() ? `Open with ${first}. Use the middle cues as your reasoning, then close with ${last}.` : `Buka dari ${first}. Gunakan keyword tengah sebagai alur berpikir, lalu tutup di ${last}.`;
+}
+
+function visualCueText(topic) {
+  const blueprint = visualBlueprints[topic.id];
+  if (blueprint?.type === "table") {
+    return [topicTitle(topic), ...blueprint.rows.map(row => row.map(visualText).join(" — "))].join("\n");
+  }
+  if (blueprint?.type === "compare") {
+    return [topicTitle(topic), ...blueprint.columns.map(column => `${visualText(column.title)}: ${column.items.map(visualText).join(" • ")}`)].join("\n");
+  }
+  const nodes = (blueprint?.nodes || fallbackVisualPoints(topic)).map(([label]) => visualText(label));
+  return `${topicTitle(topic)}\n${nodes.join(" → ")}`;
+}
 
 function filteredTopics() {
   const needle = normalize(state.query);
@@ -1241,20 +1703,30 @@ function renderAnswer() {
   const topic = activeTopic();
   const result = filteredTopics();
   const index = result.findIndex(item => item.id === topic.id);
+  const visualView = state.view === "visual";
+  const displayMode = visualView ? "quick" : state.mode;
   els.crumb.textContent = topicCategory(topic).toUpperCase();
   els.answerTitle.textContent = topicTitle(topic);
-  els.duration.textContent = `± ${state.mode === "quick" ? Math.max(20, Math.round(topic.duration * .7 / 5) * 5) : topic.duration} ${isEnglish() ? "seconds" : "detik"}`;
+  els.duration.textContent = `± ${displayMode === "quick" ? Math.max(20, Math.round(topic.duration * .7 / 5) * 5) : topic.duration} ${isEnglish() ? "seconds" : "detik"}`;
   els.question.textContent = topicQuestion(topic);
   els.scriptText.textContent = topicAnswer(topic);
+  renderVisualCue(topic);
+  els.visualCuePanel.hidden = !visualView;
+  els.scriptCard.hidden = visualView;
+  els.copyButtonLabel.textContent = visualView ? (isEnglish() ? "Copy cues" : "Salin keyword") : (isEnglish() ? "Copy answer" : "Salin jawaban");
   els.keyPoints.innerHTML = topic.points.map(point => `<li>${point}</li>`).join("");
   els.answerNote.textContent = topic.note;
   els.referenceText.textContent = topic.reference;
   renderHubContent(topic);
+  if (topic.isHub) {
+    els.hubVisual.hidden = true;
+    els.hubDetails.hidden = visualView;
+  }
   const supplements = topic.supplements || [];
-  els.materialExtensions.hidden = isEnglish() || !supplements.length;
+  els.materialExtensions.hidden = visualView || isEnglish() || !supplements.length;
   els.materialExtensions.innerHTML = supplements.map(item => `<section class="material-extension source-${item.source}"><div class="extension-label"><span>+</span> TAMBAHAN ${escapeHtml(item.label || `MATERI ${item.source}`)}</div><p>${escapeHtml(item.text)}</p></section>`).join("");
-  els.supportGrid.hidden = isEnglish();
-  els.referenceBar.hidden = isEnglish();
+  els.supportGrid.hidden = visualView || isEnglish();
+  els.referenceBar.hidden = visualView || isEnglish();
   const related = getRelatedTopics(topic);
   els.relatedSection.hidden = !related.length;
   els.relatedLinks.innerHTML = related.map(item => `<button type="button" class="related-link" data-related-id="${item.id}">${escapeHtml(topicTitle(item))}</button>`).join("");
@@ -1263,12 +1735,17 @@ function renderAnswer() {
   els.currentIndex.textContent = index + 1;
   els.prevButton.disabled = index <= 0;
   els.nextButton.disabled = index < 0 || index >= result.length - 1;
-  document.querySelectorAll(".mode-tab").forEach(tab => tab.classList.toggle("active", tab.dataset.mode === state.mode));
+  document.querySelectorAll(".mode-tab").forEach(tab => {
+    const active = tab.dataset.view === "visual" ? visualView : !visualView && tab.dataset.mode === state.mode;
+    tab.classList.toggle("active", active);
+  });
   localStorage.setItem("interview-active", topic.id);
   const currentUrl = new URL(location.href);
   currentUrl.hash = topic.id;
   if (isEnglish()) currentUrl.searchParams.set("lang", "en");
   else currentUrl.searchParams.delete("lang");
+  if (state.view === "script") currentUrl.searchParams.set("view", "script");
+  else currentUrl.searchParams.delete("view");
   history.replaceState(null, "", currentUrl.href);
 }
 
@@ -1284,7 +1761,7 @@ function applyLanguageUi() {
   els.relatedHeadingHint.textContent = isEnglish() ? "Click for quick access" : "Klik untuk pindah cepat";
   els.prevButtonLabel.textContent = isEnglish() ? "Previous" : "Sebelumnya";
   els.nextButtonLabel.textContent = isEnglish() ? "Next" : "Berikutnya";
-  els.sourcePillText.textContent = isEnglish() ? "3 Sources + Father's Update" : "3 Materi + Update Ayah";
+  els.sourcePillText.textContent = isEnglish() ? "3 Sources + Father's MECE Update" : "3 Materi + Update MECE Ayah";
   els.visualMapLabel.textContent = "VISUAL MAP";
   els.visualMapHint.textContent = isEnglish() ? "Overview of this section" : "Alur besar section ini";
   els.fullMaterialLabel.textContent = isEnglish() ? "COMPLETE MATERIAL" : "MATERI LENGKAP";
@@ -1298,8 +1775,10 @@ function applyLanguageUi() {
   document.querySelectorAll(".language-option").forEach(button => button.classList.toggle("active", button.dataset.language === state.language));
   const quickTab = document.querySelector('[data-mode="quick"]');
   const fullTab = document.querySelector('[data-mode="full"]');
-  quickTab.textContent = isEnglish() ? "Ready-to-read version" : "Versi siap dibaca";
-  fullTab.textContent = "Versi lebih detail";
+  const visualTab = document.querySelector('[data-view="visual"]');
+  visualTab.textContent = isEnglish() ? "Visual cues" : "Peta visual";
+  quickTab.textContent = isEnglish() ? "Short script" : "Script singkat";
+  fullTab.textContent = isEnglish() ? "Detailed script" : "Script detail";
   fullTab.hidden = isEnglish();
 }
 
@@ -1399,9 +1878,11 @@ els.hubJumpLinks.addEventListener("click", event => {
 });
 
 document.querySelector(".mode-tabs").addEventListener("click", event => {
-  const tab = event.target.closest("[data-mode]");
+  const tab = event.target.closest("[data-view]");
   if (!tab) return;
-  state.mode = tab.dataset.mode;
+  state.view = tab.dataset.view;
+  if (tab.dataset.mode) state.mode = tab.dataset.mode;
+  localStorage.setItem("interview-answer-view", state.view);
   renderAnswer();
 });
 
@@ -1417,11 +1898,11 @@ els.nextButton.addEventListener("click", () => moveTopic(1));
 els.copyButton.addEventListener("click", async () => {
   try {
     const topic = activeTopic();
-    const text = topic.isHub
+    const text = state.view === "visual" ? visualCueText(topic) : topic.isHub
       ? [topicAnswer(topic), ...topic.members.map(id => topics.find(item => item.id === id)).filter(Boolean).map(member => `${topicTitle(member)}\n${isEnglish() ? (englishAnswers[member.id] || member.quick) : member.full}`)].join("\n\n")
       : topicAnswer(topic);
     await navigator.clipboard.writeText(text);
-    showToast(isEnglish() ? "Answer copied" : "Jawaban berhasil disalin");
+    showToast(state.view === "visual" ? (isEnglish() ? "Visual cues copied" : "Keyword berhasil disalin") : (isEnglish() ? "Answer copied" : "Jawaban berhasil disalin"));
   } catch {
     showToast(isEnglish() ? "The browser did not allow copying" : "Browser tidak mengizinkan penyalinan");
   }
@@ -1435,6 +1916,8 @@ els.focusButton.addEventListener("click", () => {
 function applyFontSize(value) {
   state.fontSize = Number(value);
   document.documentElement.style.setProperty("--answer-font-size", `${state.fontSize}px`);
+  document.documentElement.style.setProperty("--visual-font-size", `${Math.max(12, Math.round(state.fontSize * .62))}px`);
+  document.documentElement.style.setProperty("--visual-small-size", `${Math.max(10, Math.round(state.fontSize * .48))}px`);
   els.fontSizeSlider.value = state.fontSize;
   els.fontSizeValue.textContent = state.fontSize;
   localStorage.setItem("interview-font-size", state.fontSize);

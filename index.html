@@ -25,7 +25,7 @@
           <button class="language-option active" type="button" data-language="id">IND</button>
           <button class="language-option" type="button" data-language="en">ENG</button>
         </div>
-        <div class="source-pill"><i></i> <span id="sourcePillText">3 Materi + Update Ayah</span></div>
+        <div class="source-pill"><i></i> <span id="sourcePillText">3 Materi + Update MECE Ayah</span></div>
         <button class="icon-button" id="focusButton" type="button" title="Mode fokus baca" aria-label="Mode fokus baca">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3H5a2 2 0 0 0-2 2v3M16 3h3a2 2 0 0 1 2 2v3M8 21H5a2 2 0 0 1-2-2v-3M16 21h3a2 2 0 0 0 2-2v-3"/></svg>
         </button>
@@ -79,11 +79,24 @@
           <p class="question" id="question"></p>
 
           <div class="mode-tabs" role="tablist">
-            <button class="mode-tab active" data-mode="quick" type="button">Versi siap dibaca</button>
-            <button class="mode-tab" data-mode="full" type="button">Versi lebih detail</button>
+            <button class="mode-tab active" data-view="visual" type="button">Peta visual</button>
+            <button class="mode-tab" data-view="script" data-mode="quick" type="button">Script singkat</button>
+            <button class="mode-tab" data-view="script" data-mode="full" type="button">Script detail</button>
           </div>
 
-          <article class="script-card">
+          <section class="visual-cue-panel" id="visualCuePanel">
+            <div class="visual-cue-header">
+              <div>
+                <span id="visualCueEyebrow">PETA JAWABAN</span>
+                <h3 id="visualCueTitle">Lihat keyword, lalu improvisasi</h3>
+              </div>
+              <span class="visual-kind" id="visualCueKind">FLOW</span>
+            </div>
+            <div class="visual-cue" id="visualCue"></div>
+            <div class="visual-prompt" id="visualPrompt"></div>
+          </section>
+
+          <article class="script-card" id="scriptCard" hidden>
             <div class="quote-mark">“</div>
             <p id="scriptText"></p>
           </article>
